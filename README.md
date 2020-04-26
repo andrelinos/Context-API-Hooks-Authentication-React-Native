@@ -2,14 +2,13 @@
 
 <img src="./printScreenMasterClass12.png" alt="">
 
-## Notas sobre
+## Notas
 Autenticação sempre foi uma pedra no sapato na hora de controlar isso no front-end, seja na web ou no mobile, mas com a Context API e os hooks, isso se torna um processo muito mais simples.
 
 Nesse vídeo mostro o processo inteiro de autenticação no React Native, desde a chamada à API para o back-end, rotas autenticadas e o storage e compartilhamento de estado entre os componentes.
 
 https://www.youtube.com/watch?v=KISMYYXSIX8
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KISMYYXSIX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Sobre projeto
 Projeto desenvolvido durante a aula apresentada acima e adicionado ao meu repositório para futuras consultas.
