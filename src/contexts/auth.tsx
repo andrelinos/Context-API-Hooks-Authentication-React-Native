@@ -24,22 +24,26 @@ export const AuthProvider: React.FC = ({ children }) => {
 
   useEffect(() => {
     async function loadStoragedData() {
-      /* try multiGet*/
-      const storageUser = await AsyncStorage.getItem('@RNAuth:user');
-      const storageToken = await AsyncStorage.getItem('@RNAuth:token');
+      try {
+        const [name, token] = await AsyncStorage.multiGet([
+          '@RNAuth:user',
+          '@RNAuth:token',
+        ]);
 
-      // await new Promise((resolve) => setTimeout(resolve, 1000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      if (storageUser && storageToken) {
-        // Set toke for all request
-        api.defaults.headers.Authorization = `Bearer ${storageToken}`;
+        if (name && token) {
+          // Set toke for all request
+          api.defaults.headers.Authorization = `Bearer ${token[1]}`;
 
-        setUser(JSON.parse(storageUser));
-        setLoading(false);
+          setUser(JSON.parse(name[1]));
+          setLoading(false);
+        }
+      } catch (err) {
+        return;
       }
+      loadStoragedData();
     }
-
-    loadStoragedData();
   });
 
   async function signIn() {
