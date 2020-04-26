@@ -1,6 +1,6 @@
 # Autenticação no React Native / ReactJS com Context API & Hooks | Masterclass #12
 
-<img src="printScreenMasterClass12.png" alt="">
+<img src="./printScreenMasterClass12.png" alt="">
 
 ## Notas sobre
 Autenticação sempre foi uma pedra no sapato na hora de controlar isso no front-end, seja na web ou no mobile, mas com a Context API e os hooks, isso se torna um processo muito mais simples.
