@@ -23,8 +23,8 @@ export const AuthProvider: React.FC = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function loadStoragedData() {
-      try {
+    try {
+      async function loadStoragedData() {
         const [name, token] = await AsyncStorage.multiGet([
           '@RNAuth:user',
           '@RNAuth:token',
@@ -39,10 +39,10 @@ export const AuthProvider: React.FC = ({ children }) => {
           setUser(JSON.parse(name[1]));
           setLoading(false);
         }
-      } catch (err) {
-        return;
       }
       loadStoragedData();
+    } catch (err) {
+      return;
     }
   });
 

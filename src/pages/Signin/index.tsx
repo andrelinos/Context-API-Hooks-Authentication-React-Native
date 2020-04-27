@@ -1,20 +1,11 @@
 import React from 'react';
-import {
-  View,
-  TouchableOpacity,
-  Text,
-  StyleSheet,
-  TextInput,
-} from 'react-native';
+import { View, TouchableOpacity, Text, TextInput } from 'react-native';
 import { useAuth } from '../../contexts/auth';
 
 import { styles } from './styles';
 
 const SignIn: React.FC = () => {
-  const { signed, user, signIn } = useAuth();
-
-  console.log(signed);
-  console.log(user);
+  const { signIn } = useAuth();
 
   async function handleSignIn() {
     signIn();
